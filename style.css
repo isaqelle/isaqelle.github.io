@@ -5,6 +5,9 @@ body {
   font-family: 'Fira Code', monospace;
   color: #d4d4d4;
 
+  cursor: url("assets/icons/cursor.png"), auto;
+
+
 }
 
 
@@ -39,11 +42,50 @@ h2{
 }
 
 .skillsGrid{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   gap: 1rem;
+  border: 1px solid blue;
+  place-items: center;
 }
 
-.skillsGrid h3{
-  background-color: blue;
+.skillsGrid h3 {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+
+  /* glossy gradient */
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #dff3ff 35%,
+    #9ad7ff 55%,
+    #3aa0e6 100%
+  );
+
+  /* soft border */
+  border: 1px solid #6bb6e8;
+
+  /* outer shadow */
+  box-shadow:
+    0 4px 8px rgba(0,0,0,0.15),
+    inset 0 2px 3px rgba(255,255,255,0.9);
+
+  color: #0b3c5d;
+}
+
+.skillsGrid h3:hover{
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ffdff9 35%,
+    #fc9aff 55%,
+    #e63ad2 100%
+  );
+
+  color:#590b5d;
+  border: 1px solid #e26be8;
 }
