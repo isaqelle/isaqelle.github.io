@@ -1,15 +1,24 @@
+const speed = 40;
 
-const text = `work in progress:3`;
+function typeText(elementId, text, callback) {
+  let i = 0;
+  const el = document.getElementById(elementId);
 
-const speed = 40; // ms per character
-let index = 0;
-
-function type() {
-  if (index < text.length) {
-    document.getElementById("typing").textContent += text[index];
-    index++;
-    setTimeout(type, speed);
+  function type() {
+    if (i < text.length) {
+      el.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, speed);
+    } else if (callback) {
+      callback();
+    }
   }
+
+  type();
 }
 
-type();
+// first: name
+typeText("title", "isabelle dahlström", () => {
+  // then: code line
+  typeText("typing", "work in progress:3");
+});
