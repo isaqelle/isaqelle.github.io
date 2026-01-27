@@ -10,6 +10,29 @@ body {
 
 }
 
+/* this is the container for everything!! use grid here */
+.outerContainer{
+  border: 1px solid red;
+
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.sidebar{
+  text-decoration: none;
+  list-style: none;
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+.sidebar a:hover{
+  cursor: url("assets/icons/cursor.png"), auto;
+  color: #000;
+}
+
+.sidebar img{
+  width: 140px;
+}
 
 /* cursor */
 .cursor {
@@ -23,17 +46,25 @@ body {
 }
 
 
+.sidebar, .container{
+  border: 2px solid red;
+  margin: 1rem;
+  padding: 1rem;
+}
+
 
 .container{
-  padding: 1rem;
-  width: 50%;
+  
+  /* width: 50%; */
   height: auto;
-  margin: 1rem;
-
   background-image: url(assets/bg.jpg);
+  background-repeat: no-repeat;
+  /* or contain? */
+  background-size: cover; 
 }
 
 .innerContainer{
+
   margin: 1rem;
   padding: 1rem;
 
@@ -91,3 +122,4 @@ h2{
   color:#590b5d;
   border: 1px solid #e26be8;
 }
+
