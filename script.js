@@ -17,8 +17,12 @@ function typeText(elementId, text, callback) {
   type();
 }
 
-// first: name
-typeText("title", "isabelle dahlström", () => {
-  // then: code line
-  typeText("typing", "work in progress:3");
+document.addEventListener("DOMContentLoaded", () => {
+  // first: name
+  typeText("title", "isabelle dahlström", () => {
+    // then: code line
+    typeText("typing", "work in progress:3", () => {
+      typeText("galleryTitle", "gallery")
+    });
+  });
 });
