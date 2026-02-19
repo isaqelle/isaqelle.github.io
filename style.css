@@ -134,14 +134,19 @@ h2{
 
 .parent > div {
   border: 1px solid white;
+  padding: 15px;
 }
 
-
-.parent > div {
-  border: 1px solid white;
-  width: 100%;
-  height: 100%;
+.parent > div > h3{
+  background-color: #ffffffdc;
+  padding: 3px;
+  text-transform: uppercase;
 }
+
+.parent a:hover{
+  color: #ffffffdc;
+}
+
 
 
 /* phone breakpoint */
