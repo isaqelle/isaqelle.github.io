@@ -23,6 +23,8 @@ body {
   list-style: none;
   background-color: #ffffff;
   font-weight: bold;
+
+  height: 40%;
 }
 
 .sidebar a:hover{
@@ -129,18 +131,27 @@ h2{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  background-color: #000;
+  background-color: #00000049;
 }
 
+
 .parent > div {
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.203);
   padding: 15px;
 }
+
+
 
 .parent > div > h3{
   background-color: #ffffffdc;
   padding: 3px;
   text-transform: uppercase;
+  font-family: "Concert One", sans-serif;
+  font-size: 30px;
+}
+
+.parent a{
+  color: #0b3c5d;
 }
 
 .parent a:hover{
